@@ -28,9 +28,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.lifecycle.ViewModelProvider
+import com.example.jetpackcomposepoc.ui.theme.JetpackComposePOCTheme
 import com.example.jetpackcomposepoc.viewmodel.CounterViewModel
 import com.example.jetpackcomposepoc.viewmodel.CounterViewModel.NavState.GO_TO_CARDS_SCREEN
-import com.example.jetpackcomposepoc.ui.theme.JetpackComposePOCTheme
 
 class CounterActivity : ComponentActivity() {
 
