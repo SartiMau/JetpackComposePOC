@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JetpackComposePOC</string>
+    <string name="title_activity_cards">CardsActivity</string>
+    <string name="card_body">Como sugiere el nombre, la diferencia entre LazyColumn y LazyRow es la orientación en la que se integran sus elementos y se desplazan. LazyColumn produce una lista de desplazamiento vertical, mientras que LazyRow produce una de desplazamiento horizontal.</string>
+</resources>
