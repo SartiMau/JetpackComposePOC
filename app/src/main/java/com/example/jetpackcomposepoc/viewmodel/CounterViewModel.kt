@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class CounterViewModel : ViewModel() {
+class CounterViewModel: ViewModel() {
 
     private val navMutableLiveData: MutableLiveData<NavData> = MutableLiveData()
     fun getDataValue(): LiveData<NavData> {

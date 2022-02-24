@@ -30,20 +30,26 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.lifecycle.ViewModelProvider
 import com.example.jetpackcomposepoc.R
 import com.example.jetpackcomposepoc.data.CardInfo
 import com.example.jetpackcomposepoc.ui.theme.GlobantDark
 import com.example.jetpackcomposepoc.ui.theme.GlobantGreen
+import com.example.jetpackcomposepoc.viewmodel.CardsViewModel
 
 class CardsActivity : ComponentActivity() {
+
+    private lateinit var viewModel: CardsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        viewModel = ViewModelProvider(this).get(CardsViewModel::class.java)
         val cardInfo = CardInfo(
             cardNames = listOf("Mariano", "Juan", "Julio", "Mauro", "Ivan", "Carlos", "Lucas", "Sebastian"),
             cardBody = resources.getString(R.string.card_body)
@@ -64,10 +70,8 @@ class CardsActivity : ComponentActivity() {
                 .fillMaxSize()
                 .background(color = Color(0xFF89898c))
         ) {
-            LazyColumn(
-                modifier = Modifier
-                    .fillMaxSize()
-            ) {
+            LazyColumn(modifier = Modifier
+                .fillMaxSize()) {
                 items(items = names) { name ->
                     Card(name = name, body = body)
                 }
